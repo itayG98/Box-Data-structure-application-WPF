@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Box_Data_structure_application.Views.BestOfferView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Box_Data_structure_application.Views"
+             xmlns:viewmodels="clr-namespace:Box_Data_structure_application.ViewModels"
+             mc:Ignorable="d"
+             DataContext="viewmodels:BestOfferViewModel">
+    <Grid>
+        <TextBlock Text="Best Offer "></TextBlock>
+    </Grid>
+</UserControl>
