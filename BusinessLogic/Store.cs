@@ -29,7 +29,7 @@ namespace BusinessLogic
         public MockDB Data => _data;
         public Store()
         {
-            _config = new StoreConfiguration();
+            _config = new StoreConfiguration("StoreConfig.json");
             LIMIT_PERCENTAGE = Config.ConfigData.LIMIT_PERCENTAGE;
             MAX_BOXES_PER_SIZE = Config.ConfigData.MAX_BOXES_PER_SIZE;
             MIN_BOXES_PER_SIZE = Config.ConfigData.MIN_BOXES_PER_SIZE;

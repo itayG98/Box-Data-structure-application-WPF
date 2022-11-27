@@ -4,12 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Box_Data_structure_application.Views" 
-             xmlns:viewmodels="clr-namespace:Box_Data_structure_application.ViewModels"
-             mc:Ignorable="d"
-             DataContext="viewmodels:StoreStockViewModel">
-
+             xmlns:viewmodels="clr-namespace:Box_Data_structure_application.ViewModels" 
+             xmlns:Model="assembly=Model"
+             
+             mc:Ignorable="d">
+    
 
     <Grid>
-        <TextBlock Text="Stock "></TextBlock>
+        <ListView ItemsSource="{Binding Boxes}">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="auto" Header="Height"  DisplayMemberBinding="{Binding Height}" />
+                        <GridViewColumn Width="auto" Header="Width"  DisplayMemberBinding="{Binding Width}" />
+                        <GridViewColumn Header="Count"  DisplayMemberBinding="{Binding Count}" />
+                        <GridViewColumn Width="auto" Header="Last Purchased"  DisplayMemberBinding="{Binding LastPurchased,StringFormat=d}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </UserControl>

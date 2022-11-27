@@ -8,6 +8,19 @@
              mc:Ignorable="d"
              DataContext="viewmodels:BestOfferViewModel">
     <Grid>
-        <TextBlock Text="Best Offer "></TextBlock>
+        <Grid>
+            <ListView ItemsSource="{Binding Boxes}">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Width="auto" Header="Height"  DisplayMemberBinding="{Binding Height}" />
+                            <GridViewColumn Width="auto" Header="Width"  DisplayMemberBinding="{Binding Width}" />
+                            <GridViewColumn Header="Count"  DisplayMemberBinding="{Binding Count}" />
+                            <GridViewColumn Width="auto" Header="Last Purchased"  DisplayMemberBinding="{Binding LastPurchased,StringFormat=d}" />
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
     </Grid>
 </UserControl>

@@ -9,10 +9,9 @@ namespace BusinessLogic.Services
     {
         public ConfigData ConfigData { get; private set; }
 
-        public StoreConfiguration()
+        public StoreConfiguration(string fileName)
         {
             var currentDir = Environment.CurrentDirectory;
-            var fileName = "StoreConfig.json";
             var configPath = Path.Combine(currentDir, fileName);
             var raw = File.ReadAllText(configPath);
             ConfigData = JsonConvert.DeserializeObject<ConfigData>(raw);
