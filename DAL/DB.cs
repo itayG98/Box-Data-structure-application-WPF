@@ -5,22 +5,22 @@ namespace DAL
     /// <summary>
     /// The class is a singeltone MoockData contains Boxes array sorted  by date
     /// </summary>
-    public class DB
+    public class MockDB
     {
-        private static DB? _instance;
+        private static MockDB? _instance;
         private static Box[]? _boxes;
         public static Box[] Boxes { get => _boxes!; set => _boxes = value; }
-        public static DB Instance
+        public static MockDB Instance
         //SingleTone
         {
             get
             {
-                _instance ??= new DB();
+                _instance ??= new MockDB();
                 return _instance;
             }
         }
 
-        private DB()
+        private MockDB()
         {
             Boxes = new Box[21];
             Boxes[0] = new Box(25, 20, 76, new DateTime(2022, 1, 23));
@@ -42,7 +42,7 @@ namespace DAL
             Boxes[16] = new Box(15, 15, 80, new DateTime(2022, 7, 20));
             Boxes[17] = new Box(17, 17, 76, new DateTime(2022, 7, 21));
             Boxes[18] = new Box(20, 20, 76, new DateTime(2022, 7, 23));
-            Array.Sort(Boxes);
+            Array.Sort(Boxes); //By Date
         }
     }
 }

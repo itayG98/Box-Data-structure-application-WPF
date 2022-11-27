@@ -18,7 +18,7 @@ namespace BusinessLogic
         /// </summary>
         private readonly BST<double, BST<double, Box>> MainTree;
         private readonly MyQueue<Box> DatesQueue;
-        private readonly DB _data;
+        private readonly MockDB _data;
         private readonly StoreConfiguration _config;
         private readonly double LIMIT_PERCENTAGE;
         private readonly int MAX_BOXES_PER_SIZE;
@@ -26,7 +26,7 @@ namespace BusinessLogic
         private readonly int MAX_DAYS;
 
         public StoreConfiguration Config { get => _config; }
-        public DB Data => _data;
+        public MockDB Data => _data;
         public Store()
         {
             _config = new StoreConfiguration();
@@ -36,13 +36,13 @@ namespace BusinessLogic
             MAX_DAYS = Config.ConfigData.MAX_DAYS;
             MainTree = new BST<double, BST<double, Box>>();
             DatesQueue = new MyQueue<Box>();
-            _data = DB.Instance;
+            _data = MockDB.Instance;
             LoadFromDB();
         }
 
         private void LoadFromDB()
         {
-            foreach (var elem in DB.Boxes)
+            foreach (var elem in MockDB.Boxes)
             {
                 if (elem is Box box)
                     Add(box);

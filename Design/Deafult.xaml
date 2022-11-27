@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="center" TargetType="FrameworkElement">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextBlock.FontSize" Value="20"/>
+    </Style>
+
+    <Style TargetType="TextBlock" BasedOn="{StaticResource center}"/>
+
+    <Style TargetType="TextBox" BasedOn="{StaticResource center}">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="90"/>
+    </Style>
+
+    <DataTemplate x:Key="dtName">
+        <TextBlock Text="{Binding Name}"/>
+    </DataTemplate>
+
+</ResourceDictionary>
