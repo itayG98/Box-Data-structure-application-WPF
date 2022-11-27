@@ -7,7 +7,7 @@
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/Design;component/Default.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Design;component/Deafault.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>
