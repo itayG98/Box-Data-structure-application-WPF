@@ -10,6 +10,7 @@
     <Style TargetType="TextBlock" BasedOn="{StaticResource center}"/>
 
     <Style TargetType="TextBox" BasedOn="{StaticResource center}">
+        <Setter Property="Background" Value="Red"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="MinWidth" Value="90"/>
     </Style>
