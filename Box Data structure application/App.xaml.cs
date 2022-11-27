@@ -1,9 +1,11 @@
-﻿using Box_Data_structure_application.Views;
+﻿using Box_Data_structure_application.ViewModels;
+using Box_Data_structure_application.Views;
 using BusinessLogic;
 using BusinessLogic.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
+using System.Windows.Navigation;
 
 
 namespace Box_Data_structure_application
@@ -40,10 +42,11 @@ namespace Box_Data_structure_application
         private static IServiceProvider ConfigureServices()
         {
             var services = new ServiceCollection();
+
             services.AddSingleton<StoreProviderService>();
-            services.AddScoped<BestOfferView>();
-            services.AddScoped<GetOfferView>();
-            services.AddScoped<StoreStockView>();
+            services.AddScoped<BestOfferViewModel>();
+            services.AddScoped<GetOfferViewModel>();
+            services.AddScoped<StoreStockViewModel>();
 
             return services.BuildServiceProvider();
         }

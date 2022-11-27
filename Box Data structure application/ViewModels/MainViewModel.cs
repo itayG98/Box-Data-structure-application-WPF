@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Box_Data_structure_application.ViewModels
 {
-    internal class MainViewModel
+    public class MainViewModel
     {
     }
 }

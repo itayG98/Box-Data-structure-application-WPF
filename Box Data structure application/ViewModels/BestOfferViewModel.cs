@@ -9,7 +9,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace Box_Data_structure_application.ViewModels
 {
     [INotifyPropertyChanged]
-    internal partial class BestOfferViewModel
+    public partial class BestOfferViewModel
     {
         private readonly Store _store;
         public BestOfferViewModel(Store store)

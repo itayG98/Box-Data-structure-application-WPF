@@ -10,7 +10,7 @@ namespace Box_Data_structure_application.ViewModels
 {
     [INotifyPropertyChanged]
 
-    internal partial class GetOfferViewModel
+    public partial class GetOfferViewModel
     {
         private readonly Store _store;
         public GetOfferViewModel(Store store)
