@@ -37,10 +37,10 @@ namespace BusinessLogic
             MainTree = new BST<double, BST<double, Box>>();
             DatesQueue = new MyQueue<Box>();
             _data = MockDB.Instance;
-            LoadFromDB();
+            LoadFromMockDB();
         }
 
-        private void LoadFromDB()
+        private void LoadFromMockDB()
         {
             foreach (var elem in MockDB.Boxes)
             {
