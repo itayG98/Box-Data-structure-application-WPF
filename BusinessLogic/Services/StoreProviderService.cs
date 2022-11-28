@@ -19,9 +19,5 @@ namespace BusinessLogic.Services
                     return _store = new Store();
             }
         }
-        static StoreProviderService()
-        {
-
-        }
     }
 }
