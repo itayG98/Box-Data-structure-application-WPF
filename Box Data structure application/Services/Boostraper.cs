@@ -26,7 +26,7 @@ namespace Box_Data_structure_application.Services
         protected override void Configure()
         {
             container = new SimpleContainer();
-            container.Singleton<Store>();
+            container.Instance<Store>(store);
             container.Singleton<IWindowManager, WindowManager>();
             container.Singleton<IEventAggregator, EventAggregator>();
             container.PerRequest<BestOfferViewModel>("BestOffer");

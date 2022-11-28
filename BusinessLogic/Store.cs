@@ -27,7 +27,7 @@ namespace BusinessLogic
 
         public StoreConfiguration Config { get => _config; }
         public MockDB Data => _data;
-        public Store()
+        internal Store()
         {
             _config = new StoreConfiguration("StoreConfig.json");
             LIMIT_PERCENTAGE = Config.ConfigData.LIMIT_PERCENTAGE;
