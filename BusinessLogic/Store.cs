@@ -27,6 +27,7 @@ namespace BusinessLogic
 
         public StoreConfiguration Config { get => _config; }
         public MockDB Data => _data;
+
         internal Store()
         {
             _config = new StoreConfiguration("StoreConfig.json");
@@ -39,7 +40,7 @@ namespace BusinessLogic
             _data = MockDB.Instance;
             LoadFromMockDB();
         }
-
+          
         private void LoadFromMockDB()
         {
             foreach (var elem in MockDB.Boxes)

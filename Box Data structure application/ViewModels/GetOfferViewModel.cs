@@ -4,6 +4,7 @@ using Caliburn.Micro;
 using Microsoft.Extensions.Options;
 using Model;
 using System;
+using System.Linq;
 using System.Windows.Ink;
 
 namespace Box_Data_structure_application.ViewModels
