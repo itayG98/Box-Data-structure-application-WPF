@@ -15,7 +15,16 @@
                 </ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Design;component/Deafault.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
+            <ControlTemplate x:Key="TextBoxErrorTemplate">
+                <DockPanel LastChildFill="True">
+                    <TextBlock DockPanel.Dock="Right" 
+                        Foreground="Red" 
+                        FontSize="12pt">Invalid input</TextBlock>
+                    <Border BorderBrush="Red" BorderThickness="1">
+                        <AdornedElementPlaceholder Width="20" />
+                    </Border>
+                </DockPanel>
+            </ControlTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

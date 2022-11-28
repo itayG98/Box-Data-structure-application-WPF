@@ -1,18 +1,22 @@
 ﻿using Data_Structures;
+using System.ComponentModel.DataAnnotations;
 
 namespace Model
 {
     public class Box : IComparable, IFormattable
     {
         private int _count = 0;
-        private readonly double _height;
-        private readonly double _width;
+        private double _height;
+        private double _width;
         private DateTime _date;
         QueueNode<Box> _node;
 
-        public double Height { get => _height; }
-        public double Width { get => _width; }
-        public int Count { get => _count; set => _count = value > 0 ? value : 0; }
+        [Range(0, double.MaxValue)]
+        public double Height { get { return _height; } set { _height = value; } }
+        [Range(0, double.MaxValue)]
+        public double Width { get { return _width; } set { _width = value; } }
+        [Range(0, int.MaxValue)]
+        public int Count { get { return _count; } set { _count = value; } }
         public DateTime Date { get => _date; set => _date = value; }
         public int LastPurchased => (DateTime.Now - Date).Days;
 
