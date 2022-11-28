@@ -1,15 +1,11 @@
 ﻿using BusinessLogic;
-using BusinessLogic.Services;
 using Caliburn.Micro;
-using Microsoft.Extensions.Options;
 using Model;
 using System;
-using System.Linq;
-using System.Windows.Ink;
 
 namespace Box_Data_structure_application.ViewModels
 {
-    public partial class GetOfferViewModel : Screen
+    public partial class GetOfferViewModel : PropertyChangedBase
     {
         private readonly Store _store;
         private Box _box = new Box(1, 1, 1);
