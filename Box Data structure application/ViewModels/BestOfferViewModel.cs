@@ -9,7 +9,7 @@ using System.Linq;
 namespace Box_Data_structure_application.ViewModels
 {
 
-    public partial class BestOfferViewModel : PropertyChangedBase
+    public partial class BestOfferViewModel : Screen
     {
         private readonly Store? _store;
         public BestOfferViewModel(Store store)

@@ -16,6 +16,7 @@ namespace Box_Data_structure_application.Services
         public Boostraper()
         {
             store = StoreProviderService.Init;
+            LogManager.GetLog = type => new DebugLog(type);
             Initialize();
         }
         protected override void OnStartup(object sender, StartupEventArgs e)

@@ -9,7 +9,7 @@ using System.Windows.Ink;
 
 namespace Box_Data_structure_application.ViewModels
 {
-    public partial class GetOfferViewModel : PropertyChangedBase
+    public partial class GetOfferViewModel : Screen
     {
         private readonly Store _store;
         private Box _box = new Box(1, 1, 1);
