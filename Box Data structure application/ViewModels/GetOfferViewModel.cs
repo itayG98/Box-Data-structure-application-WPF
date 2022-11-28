@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+using BusinessLogic.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,9 @@ namespace Box_Data_structure_application.ViewModels
     public partial class GetOfferViewModel
     {
         private readonly Store _store;
-        public GetOfferViewModel(Store store)
+        public GetOfferViewModel()
         {
-            _store = store;
+            _store = StoreProviderService.Init;
         }
     }
 }

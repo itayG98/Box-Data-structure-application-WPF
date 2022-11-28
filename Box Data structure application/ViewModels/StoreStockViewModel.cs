@@ -16,18 +16,18 @@ namespace Box_Data_structure_application.ViewModels
     public partial class StoreStockViewModel
     {
         private readonly Store _store;
-        StoreProviderService _storeProvider;
 
-        [ObservableProperty]
-        private List<Box> boxes;
+        [ListBindable(true)]
+        private ObservableCollection <Box>boxes = new();
 
-        public StoreStockViewModel(StoreProviderService storeProvider)
+        public StoreStockViewModel()
         {
-            _storeProvider = storeProvider;
-            _store = _storeProvider.Init;
+            _store = _store = StoreProviderService.Init;
             foreach (Box b in _store.GetAll())
                 Boxes.Add(b);
         }
+
+        public ObservableCollection<Box> Boxes { get => boxes; }
     }
 }
     

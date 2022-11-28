@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Services
 {
-    public class StoreProviderService
+    public static class StoreProviderService
     {
-        private Store _store;
-        public Store Init
+        private static Store _store;
+        public static Store Init
         {
             get
             {
@@ -19,7 +19,7 @@ namespace BusinessLogic.Services
                     return _store = new Store();
             }
         }
-        private StoreProviderService()
+        static StoreProviderService()
         {
 
         }

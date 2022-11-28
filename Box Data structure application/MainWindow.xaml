@@ -6,20 +6,19 @@
         xmlns:local="clr-namespace:Box_Data_structure_application" 
         xmlns:Views="clr-namespace:Box_Data_structure_application.Views" 
         xmlns:ViewModels="clr-namespace:Box_Data_structure_application.ViewModels"
-        mc:Ignorable="d"
-        DataContext="MainViewModel"
-        
+        mc:Ignorable="d"     
         Title="Boxes Store">
-    <Grid Margin="10 5" MaxWidth="750">
+   
+    <Grid Margin="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>        
-                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <ContentControl Grid.Column="0">
                 <Views:StoreStockView/>

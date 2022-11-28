@@ -6,19 +6,25 @@
              xmlns:vms="clr-namespace:Box_Data_structure_application.ViewModels"
              mc:Ignorable="d">
 
+
+    <UserControl.DataContext>
+        <vms:StoreStockViewModel />
+    </UserControl.DataContext>
+
+
     <Grid>
-    <ListView ItemsSource="{Binding Boxes }">
-        <ListView.View>
-            <GridView>
-                <GridView.Columns>
-                    <GridViewColumn Width="auto" Header="Height"  DisplayMemberBinding="{Binding Height}" />
-                    <GridViewColumn Width="auto" Header="Width"  DisplayMemberBinding="{Binding Width}" />
-                    <GridViewColumn Header="Count"  DisplayMemberBinding="{Binding Count}" />
-                    <GridViewColumn Width="auto" Header="Last Purchased"  DisplayMemberBinding="{Binding LastPurchased,StringFormat=d}" />
-                </GridView.Columns>
-            </GridView>
-        </ListView.View>
-    </ListView>
-</Grid>
-    
+        <ListView ItemsSource="{Binding Boxes }">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="auto" Header="Height"  DisplayMemberBinding="{Binding Height}" />
+                        <GridViewColumn Width="auto" Header="Width"  DisplayMemberBinding="{Binding Width}" />
+                        <GridViewColumn Header="Count"  DisplayMemberBinding="{Binding Count}" />
+                        <GridViewColumn Width="auto" Header="Last Purchased"  DisplayMemberBinding="{Binding LastPurchased,StringFormat=d}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+
 </UserControl>

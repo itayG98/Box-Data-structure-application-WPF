@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic;
+using BusinessLogic.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Box_Data_structure_application.ViewModels
@@ -12,9 +13,9 @@ namespace Box_Data_structure_application.ViewModels
     public partial class BestOfferViewModel
     {
         private readonly Store _store;
-        public BestOfferViewModel(Store store)
+        public BestOfferViewModel()
         {
-            _store = store;
+            _store = StoreProviderService.Init;
         }
     }
 }
