@@ -4,11 +4,15 @@
              xmlns:local="clr-namespace:Box_Data_structure_application"
              xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             d1p1:Ignorable="d" 
-             StartupUri="MainWindow.xaml">
+             xmlns:services="clr-namespace:Box_Data_structure_application.Services"
+
+             d1p1:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <services:Boostraper x:Key="bootstrapper" />
+                </ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Design;component/Deafault.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 

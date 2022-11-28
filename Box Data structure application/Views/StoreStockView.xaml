@@ -3,14 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:vms="clr-namespace:Box_Data_structure_application.ViewModels"
+             DataContext="{Binding Source={StaticResource bootstrapper}, Path=StoreStock}"
              mc:Ignorable="d">
-
-
-    <UserControl.DataContext>
-        <vms:StoreStockViewModel />
-    </UserControl.DataContext>
-
 
     <Grid>
         <ListView ItemsSource="{Binding Boxes }">

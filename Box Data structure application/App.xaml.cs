@@ -1,12 +1,6 @@
-﻿using Box_Data_structure_application.Services;
-using Box_Data_structure_application.ViewModels;
-using Box_Data_structure_application.Views;
-using BusinessLogic;
-using BusinessLogic.Services;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using Box_Data_structure_application.ViewModels;
 using System.Windows;
-using System.Windows.Navigation;
+using Caliburn.Micro;
 
 
 namespace Box_Data_structure_application

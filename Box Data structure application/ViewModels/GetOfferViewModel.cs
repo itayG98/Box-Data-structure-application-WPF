@@ -1,22 +1,18 @@
 ﻿using BusinessLogic;
 using BusinessLogic.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Caliburn.Micro;
+using System.Windows.Ink;
 
 namespace Box_Data_structure_application.ViewModels
 {
-    [INotifyPropertyChanged]
 
-    public partial class GetOfferViewModel
+
+    public partial class GetOfferViewModel : PropertyChangedBase
     {
         private readonly Store _store;
-        public GetOfferViewModel()
+        public GetOfferViewModel(Store store)
         {
-            _store = StoreProviderService.Init;
+            _store = store;
         }
     }
 }
