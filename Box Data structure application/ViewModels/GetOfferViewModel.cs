@@ -24,10 +24,10 @@ namespace Box_Data_structure_application.ViewModels
             get { return _box.Width; }
             set
             {
-                if (value <=0)
+                if (value <= 0)
                     throw new ApplicationException("Must be positive number");
                 else
-                _box.Width = value;
+                    _box.Width = value;
             }
         }
         public double Height
@@ -38,7 +38,7 @@ namespace Box_Data_structure_application.ViewModels
                 if (value <= 0)
                     throw new ApplicationException("Must be positive number");
                 else
-                _box.Height = value;
+                    _box.Height = value;
             }
         }
         public int Count
@@ -49,12 +49,24 @@ namespace Box_Data_structure_application.ViewModels
                 if (value <= 0)
                     throw new ApplicationException("Must be positive number");
                 else
-                _box.Count = value;
+                    _box.Count = value;
+            }
+        }
+        public bool CanGetMe
+        {
+            get
+            {
+                return Width != default &&
+                Height != default &&
+                Count != default;
             }
         }
         public void GetMe()
         {
-            _store.GetBestOffer(Width,Height,Count);
+            if (Width != default &&
+                Height != default &&
+                Count != default)
+                _store.GetBoxes(Width, Height, Count);
         }
     }
 }

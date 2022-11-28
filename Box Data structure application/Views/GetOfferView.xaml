@@ -21,7 +21,8 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="Width" Grid.Row="0" Grid.Column="0"></TextBlock>
-        <TextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" MinWidth="20" Grid.Row="0" Grid.Column="1">
+        <TextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
+                  MinWidth="20" Grid.Row="0" Grid.Column="1">
             <Binding Path="Width">
                 <Binding.ValidationRules>
                     <ExceptionValidationRule>
@@ -30,21 +31,23 @@
             </Binding>
         </TextBox>
         <TextBlock Text="Height" Grid.Row="1" Grid.Column="0" ></TextBlock>
-        <TextBox Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" MinWidth="20" Grid.Row="1" Grid.Column="1">
+        <TextBox Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
+                 MinWidth="20" Grid.Row="1" Grid.Column="1">
             <Binding Path="Height">
                 <Binding.ValidationRules>
                     <ExceptionValidationRule />
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>   
-        <TextBlock Text="Amount" Grid.Row="1" Grid.Column="0"></TextBlock>
-        <TextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" MinWidth="20" Grid.Row="1" Grid.Column="1">
+        <TextBlock Text="Amount" Grid.Row="2" Grid.Column="0"></TextBlock>
+        <TextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
+                  MinWidth="20" Grid.Row="2" Grid.Column="1">
             <Binding Path="Count">
                 <Binding.ValidationRules>
                     <ExceptionValidationRule />
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>
-        <Button x:Name="GetMe" Content="Get Me!" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="GetMe" IsEnabled="{Binding CanGetMe}"  Grid.Row="3" Grid.ColumnSpan="2">Get Me!</Button>
     </Grid>
 </UserControl>
