@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Box_Data_structure_application.Views"
+             xmlns:cal="http://caliburnmicro.com" 
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              DataContext="{Binding Source={StaticResource bootstrapper}, Path=BestOffer}"
              mc:Ignorable="d" >
 

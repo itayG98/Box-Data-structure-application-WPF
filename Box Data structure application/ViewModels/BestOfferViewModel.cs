@@ -17,6 +17,7 @@ namespace Box_Data_structure_application.ViewModels
         public BindableCollection<Box> Boxes => _boxes;
         public BestOfferViewModel(Store store)
         {
+            _boxes = new BindableCollection<Box>();
             _store = store;
             _store.GetBoxesEvent += onRequestOffer;
         }

@@ -53,7 +53,7 @@ namespace Box_Data_structure_application.Services
 
         public StoreStockViewModel StoreStock => (StoreStockViewModel)GetInstance(typeof(StoreStockViewModel), "StoreStock");   
         public GetOfferViewModel GetOffer => (GetOfferViewModel)GetInstance(typeof(GetOfferViewModel), "GetOffer");  
-        public BestOfferViewModel BestOffer => (BestOfferViewModel)GetInstance(typeof(BestOfferViewModel), "GetOffer");
+        public BestOfferViewModel BestOffer => (BestOfferViewModel)GetInstance(typeof(BestOfferViewModel), "BestOffer");
 
     }
 }
