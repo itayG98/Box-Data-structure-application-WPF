@@ -5,7 +5,7 @@ using System;
 
 namespace Box_Data_structure_application.ViewModels
 {
-    public partial class GetOfferViewModel : PropertyChangedBase
+    public partial class GetOfferViewModel : Screen
     {
         private readonly Store _store;
         private Box _box = new Box(1, 1, 1);
@@ -48,14 +48,11 @@ namespace Box_Data_structure_application.ViewModels
                     _box.Count = value;
             }
         }
-        public bool CanGetMe
+        public bool CanGetMe()
         {
-            get
-            {
-                return Width != default &&
-                Height != default &&
-                Count != default;
-            }
+            return Width != default &&
+            Height != default &&
+            Count != default;
         }
         public void GetMe()
         {

@@ -23,10 +23,13 @@ namespace Box_Data_structure_application.ViewModels
 
         private void onRequestOffer(double width, double height, int count)
         {
+            if (_store != null) 
+            { 
             _boxes.Clear(); 
-            foreach (Box box in _store?.GetBestOffer(width,height,count))
+            foreach (Box box in _store.GetBestOffer(width,height,count))
                 _boxes.Add(box);
             NotifyOfPropertyChange(nameof(Boxes));
+            }
         }
     }
 }
