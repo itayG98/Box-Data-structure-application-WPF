@@ -50,7 +50,7 @@
                 </Binding.ValidationRules>
             </Binding>
         </TextBox>
-        <Button Content="Get Offer" Grid.Row="3" Grid.Column="2">
+        <Button Content="Get Offer" Grid.Row="3" Grid.ColumnSpan="2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <cal:ActionMessage MethodName="GetMe"/>

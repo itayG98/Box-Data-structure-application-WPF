@@ -33,6 +33,7 @@ namespace Box_Data_structure_application.Services
             container.PerRequest<BestOfferViewModel>("BestOffer");
             container.PerRequest<GetOfferViewModel>("GetOffer");
             container.PerRequest<StoreStockViewModel>("StoreStock");
+            container.PerRequest<NavigationBarViewModel>("NavBar");
             container.Singleton<HomePageViewModel>("HomePage");
         }
 
@@ -53,7 +54,8 @@ namespace Box_Data_structure_application.Services
 
         public StoreStockViewModel StoreStock => (StoreStockViewModel)GetInstance(typeof(StoreStockViewModel), "StoreStock");   
         public GetOfferViewModel GetOffer => (GetOfferViewModel)GetInstance(typeof(GetOfferViewModel), "GetOffer");  
-        public BestOfferViewModel BestOffer => (BestOfferViewModel)GetInstance(typeof(BestOfferViewModel), "BestOffer");
+        public BestOfferViewModel BestOffer => (BestOfferViewModel)GetInstance(typeof(BestOfferViewModel), "BestOffer");    
+        public NavigationBarViewModel NavBar => (NavigationBarViewModel)GetInstance(typeof(NavigationBarViewModel), "NavBar");
 
     }
 }
