@@ -25,10 +25,6 @@ namespace BusinessLogic
         private readonly int MIN_BOXES_PER_SIZE;
         private readonly int MAX_DAYS;
 
-        public Action<double,double,int> GetBoxesEvent;
-
-        public void GetBoxes(double width , double height , int count)
-           => GetBoxesEvent?.Invoke(width, height, count);
         public StoreConfiguration Config { get => _config; }
         public MockDB Data => _data;
 

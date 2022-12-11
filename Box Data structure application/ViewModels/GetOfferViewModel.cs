@@ -1,18 +1,19 @@
 ﻿using BusinessLogic;
 using Caliburn.Micro;
 using Model;
+using Services;
 using System;
 
 namespace Box_Data_structure_application.ViewModels
 {
     public partial class GetOfferViewModel : Screen
     {
-        private readonly Store _store;
+        private readonly BoxesService _boxesService;
         private Box _box = new Box(1, 1, 1);
 
-        public GetOfferViewModel(Store store)
+        public GetOfferViewModel(BoxesService boxesService)
         {
-            _store = store;
+            _boxesService= boxesService;
         }
 
         public double Width
@@ -59,7 +60,7 @@ namespace Box_Data_structure_application.ViewModels
             if (Width != default &&
                 Height != default &&
                 Count != default)
-                _store.GetBoxes(Width, Height, Count);
+                _boxesService.GetBoxes(Width, Height, Count);
         }
     }
 }

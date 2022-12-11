@@ -6,6 +6,7 @@ using System;
 using System.Windows;
 using BusinessLogic;
 using BusinessLogic.Services;
+using Services;
 
 namespace Box_Data_structure_application.Services
 {
@@ -28,6 +29,7 @@ namespace Box_Data_structure_application.Services
         {
             container = new SimpleContainer();
             container.Instance<Store>(store);
+            container.Singleton<BoxesService>();
             container.Singleton<IWindowManager, WindowManager>();
             container.Singleton<IEventAggregator, EventAggregator>();
             container.PerRequest<BestOfferViewModel>("BestOffer");
