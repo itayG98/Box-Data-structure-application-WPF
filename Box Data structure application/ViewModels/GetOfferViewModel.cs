@@ -55,12 +55,12 @@ namespace Box_Data_structure_application.ViewModels
             Height != default &&
             Count != default;
         }
-        public void GetMe()
+        public async  void GetMe()
         {
             if (Width != default &&
                 Height != default &&
                 Count != default)
-                _boxesService.GetBoxes(Width, Height, Count);
+                await _boxesService.GetBoxes(Width, Height, Count);
         }
     }
 }

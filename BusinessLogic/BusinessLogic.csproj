@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj" />
-    <ProjectReference Include="..\Data Structures\Data Structures.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
 
