@@ -5,5 +5,9 @@
         <Setter Property="Background" Value="WhiteSmoke"/>
         <Setter Property="MinWidth" Value="90"/>
     </Style>
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="WhiteSmoke"/>
+        <Setter Property="MinWidth" Value="90"/>
+    </Style>
 
 </ResourceDictionary>

@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Text="Width" Grid.Row="0" Grid.Column="0"></TextBlock>
-        <TextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
+        <local:DigitdTextBox   Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
                   MinWidth="20" Grid.Row="0" Grid.Column="1">
             <Binding Path="Width">
                 <Binding.ValidationRules>
@@ -31,31 +31,31 @@
                     </ExceptionValidationRule>
                 </Binding.ValidationRules>
             </Binding>
-        </TextBox>
-        <TextBlock Text="Height" Grid.Row="1" Grid.Column="0" ></TextBlock>
-        <TextBox Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
+        </local:DigitdTextBox>
+        <TextBlock  Text="Height" Grid.Row="1" Grid.Column="0" ></TextBlock>
+        <local:DigitdTextBox   Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
                  MinWidth="20" Grid.Row="1" Grid.Column="1">
             <Binding Path="Height">
                 <Binding.ValidationRules>
                     <ExceptionValidationRule />
                 </Binding.ValidationRules>
             </Binding>
-        </TextBox>   
+        </local:DigitdTextBox>   
         <TextBlock Text="Amount" Grid.Row="2" Grid.Column="0"></TextBlock>
-        <TextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
+        <local:DigitdTextBox  Validation.ErrorTemplate="{StaticResource TextBoxErrorTemplate}" 
                   MinWidth="20" Grid.Row="2" Grid.Column="1">
             <Binding Path="Count">
                 <Binding.ValidationRules>
                     <ExceptionValidationRule />
                 </Binding.ValidationRules>
             </Binding>
-        </TextBox>
+        </local:DigitdTextBox>
         <Button Content="Get Offer" Grid.Row="3" Grid.ColumnSpan="2">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <cal:ActionMessage MethodName="GetMe"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            </Button>
+        </Button>
     </Grid>
 </UserControl>

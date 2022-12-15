@@ -16,7 +16,7 @@
                 <ResourceDictionary Source="pack://application:,,,/Design;component/Deafault.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <ControlTemplate x:Key="TextBoxErrorTemplate">
-                <DockPanel LastChildFill="True">
+                <DockPanel LastChildFill="True" Width="auto">
                     <TextBlock DockPanel.Dock="Right" 
                         Foreground="Red" 
                         FontSize="12pt">Invalid input</TextBlock>

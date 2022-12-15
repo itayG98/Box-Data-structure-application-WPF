@@ -9,7 +9,7 @@ namespace Box_Data_structure_application.ViewModels
     public partial class GetOfferViewModel : Screen
     {
         private readonly BoxesService _boxesService;
-        private Box _box = new Box(1, 1, 1);
+        private Box _box = new(1, 1, 1);
 
         public GetOfferViewModel(BoxesService boxesService)
         {

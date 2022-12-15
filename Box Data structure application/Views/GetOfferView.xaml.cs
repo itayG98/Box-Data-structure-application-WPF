@@ -23,6 +23,7 @@ namespace Box_Data_structure_application.Views
         public GetOfferView()
         {
             InitializeComponent();
-        }  
+        }
+
     }
 }
